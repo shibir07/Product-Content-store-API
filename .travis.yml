@@ -7,4 +7,4 @@ jobs:
     - stage: deploy
       env: TEST_SUITE=none
       install: skip # bundle install is not required
-      script: Product-Content-store-API/deploy.sh
+      script: /Product-Content-store-API/deploy.sh
