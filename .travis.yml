@@ -1,9 +1,4 @@
 --- 
-deploy: 
-  - 
-    provider: script
-    script: Product-Content-store-API/deploy.sh
-    true: "branch:master"
 language: generic
 sudo: required
 
