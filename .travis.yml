@@ -5,6 +5,5 @@ sudo: required
 jobs:
   include:
     - stage: deploy
-      env: TEST_SUITE=none
       install: skip # bundle install is not required
-      script:  chmod +x deploy.sh
+      script: ./deploy.sh
