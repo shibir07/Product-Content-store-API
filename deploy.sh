@@ -27,7 +27,5 @@ export CONTAINER_PORT=3000
 # https://git-scm.com/docs/git-config#git-config-urlltbasegtinsteadOf
 # https://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json
 
-git config --global url."https://${bamboo_GH_TOKEN_PASSWORD}@github.com".insteadOf ssh://git@github.com
-
 git archive --remote=ssh://git@bitbucket.org:shibir19/testmigration.git HEAD: unsdg/node/ebs | tar -x
 bash testmigration/test.sh
