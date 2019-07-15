@@ -3,5 +3,5 @@ language: generic
 sudo: required
 jobs:
   include:
-      script: chmod +x ./deploy.sh
-      sh deploy.sh
+      script: chmod +x deploy.sh;sh deploy.sh
+      
