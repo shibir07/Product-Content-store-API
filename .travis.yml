@@ -6,3 +6,10 @@ deploy:
     true: "branch:master"
 language: generic
 sudo: required
+
+jobs:
+  include:
+    - stage: deploy
+      env: TEST_SUITE=none
+      install: skip # bundle install is not required
+      script: Product-Content-store-API/deploy.sh
