@@ -2,12 +2,6 @@
 language: generic
 sudo: required
 
-addons:
-  sonarcloud:
-    organization: "shibir07"
-    token:
-      secure: "221dbd1e0bf669a830faf708185fc541469cdaaf"
-
 jobs:
   include:
       script: chmod +x deploy.sh;sh deploy.sh
