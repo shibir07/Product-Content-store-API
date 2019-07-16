@@ -2,18 +2,9 @@
 language: generic
 sudo: required
 
-addons:
-  sonarcloud:
-    organization: "shibir07"
-    token:
-      secure: "221dbd1e0bf669a830faf708185fc541469cdaaf" # encrypted value of your token
-      script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - sonar-scanner
 jobs:
   include:
-      script: chmod +x deploy.sh;sh deploy.sh
- 
+      script: chmod +x deploy.sh;sh deploy.sh 
 env:
   -NAME=TravisTest
  
