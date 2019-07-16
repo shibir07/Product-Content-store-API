@@ -5,13 +5,9 @@ sudo: required
 install:
 - npm install
 
-#jobs:
-  #include:
+jobs:
+  include:
       script: chmod +x deploy.sh;sh deploy.sh
-     - mkdir testtravis
-     - cd testtravis
-     - touch 123.txt
-     - echo$
 env:
   -NAME=TravisTest
  
