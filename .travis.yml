@@ -1,5 +1,6 @@
 --- 
-env: "-NAME=TravisTest"
+env: NAME=TravisTest
 jobs: 
   include: 
+    Stage: build
     script: "chmod +x deploy.sh;sh deploy.sh"
