@@ -1,9 +1,5 @@
 --- 
- language: generic
-sudo: required
-
-jobs:
-  include:
-      script: chmod +x deploy.sh;sh deploy.sh
-env:
-  -NAME=TravisTest
+env: "-NAME=TravisTest"
+jobs: 
+  include: 
+    script: "chmod +x deploy.sh;sh deploy.sh"
