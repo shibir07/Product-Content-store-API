@@ -2,9 +2,6 @@
  language: generic
 sudo: required
 
-install:
-- npm install
-
 jobs:
   include:
       script: chmod +x deploy.sh;sh deploy.sh
