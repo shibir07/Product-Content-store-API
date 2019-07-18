@@ -4,7 +4,7 @@ python:
 cache: apt
 install:
     - "sudo apt-get install pandoc"
-    - "pip install -r requirements.txt"
+    
 script: python.py
 deploy:
     provider: s3
