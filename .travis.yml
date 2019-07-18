@@ -11,7 +11,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
     secret_access_key: $AWS_SECRET_KEY
     bucket: travistestshibir
-    endpoint: aws:s3:::travistestshibir
+    endpoint: travistestshibir.s3.us-west-2.amazonaws.com
     region: us-west-2
     skip_cleanup: true
     local-dir: output
