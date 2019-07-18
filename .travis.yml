@@ -1,6 +1,22 @@
---- 
-env: NAME=TravisTest
-jobs: 
-  include: 
-    Stage: build
-    script: "chmod +x deploy.sh;sh deploy.sh"
+language: python
+python:
+    - "2.7"
+cache: apt
+install:
+    - "sudo apt-get install pandoc"
+    - "pip install -r requirements.txt"
+script: python.py
+deploy:
+    provider: s3
+    access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: www.gregreda.com
+    endpoint: www.gregreda.com.s3-website-us-east-1.amazonaws.com
+    region: us-east-1
+    skip_cleanup: true
+    local-dir: output
+    acl: public_read
+    detect_encoding: true
+notifications:
+    email:
+        on_failure: always
